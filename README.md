@@ -1,6 +1,6 @@
-# Advent of Code 2023
+# Advent of Code 2022
 
-This repository is a collection of my solutions for the problems of Advent of Code 2023, written in the C++ programming language.
+This repository is a collection of my solutions for the problems of Advent of Code 2022, written in the C++ programming language.
 
 The project depends on GoogleTest which, if it's not already present in the system, will be downloaded and compiled locally.
 
@@ -14,7 +14,7 @@ In order to create the necessary files for each day a command line tool has been
 
 To access the commands available open a terminal and type:
 ```console
-$ cd ./aoc-2023
+$ cd ./aoc-2022
 $ source ./devtool.sh
 ```
 
@@ -67,4 +67,4 @@ $ ./test/aoc_test
 
 Though suggestions and improvement are always welcome please bare in mind that:
 
-![](https://github.com/marcope-98/aoc-2023/blob/master/media/IMG_0015.JPG)
+![](https://github.com/marcope-98/aoc-2022/blob/master/media/IMG_0015.JPG)
