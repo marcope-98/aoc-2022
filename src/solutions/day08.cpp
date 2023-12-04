@@ -2,7 +2,6 @@
 #include "aoc/utils/aliases.hpp"
 #include "aoc/utils/parse.hpp"
 #include <algorithm>
-#include <iostream>
 
 struct Grid
 {
@@ -57,7 +56,7 @@ struct Grid
   {
     std::size_t       a = 0, b = 0, c = 0, d = 0;
     const std::size_t tree_height = this->data[y * this->width + x];
-    std::size_t       i;
+    std::size_t       i           = 0;
     if (y != 0)
     {
       for (i = y - 1; i != 0; --i)
@@ -65,7 +64,6 @@ struct Grid
         a++;
         if (this->data[i * this->width + x] >= tree_height) break;
       }
-      // if (this->data[x] <= tree_height && i == 0) a++;
       if (i == 0) a++;
     }
 
@@ -82,7 +80,6 @@ struct Grid
         c++;
         if (this->data[y * this->width + i] >= tree_height) break;
       }
-      // if (this->data[x] <= tree_height) c++;
       if (i == 0) c++;
     }
 
@@ -92,7 +89,6 @@ struct Grid
       if (this->data[y * this->width + i] >= tree_height) break;
     }
 
-    // up down left right
     return a * b * c * d;
   }
 };
@@ -123,7 +119,6 @@ std::size_t aoc::day08::part2(const std::string &filename)
       visibility.data[x + visibility.width * y] = grid.scenic_score(x, y);
 
   std::size_t *result = std::max_element(visibility.data, visibility.data + size);
-  std::cerr << result - visibility.data << "\n";
 
   return *result;
 }
